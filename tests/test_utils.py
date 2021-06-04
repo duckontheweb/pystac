@@ -60,6 +60,16 @@ class UtilsTest(unittest.TestCase):
                 "https://stacspec.org/a/b/c/catalog.json",
                 "http://stacspec.org/a/",
             ),
+            (
+                "http://stacspec.org/.a",
+                "http://stacspec.org/",
+                ".a"
+            ),
+            (
+                "http://stacspec.org/a/.b",
+                "http://stacspec.org/a/foo.txt",
+                ".b"
+            )
         ]
 
         for source_href, start_href, expected in test_cases:
