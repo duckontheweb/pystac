@@ -62,7 +62,7 @@ jobs:
 
       - name: Cache dependencies (Linux)
         if: startsWith(runner.os, 'Linux')
-        uses: actions/cache@v2
+        uses: actions/cache@v3.0.1
         with:
           path: ~/.cache/pip
           # Cache based on OS, Python version, and dependency hash
@@ -70,7 +70,7 @@ jobs:
       
       - name: Cache dependencies (macOS)
         if: startsWith(runner.os, 'macOS')
-        uses: actions/cache@v2
+        uses: actions/cache@v3.0.1
         with:
           path: ~/Library/Caches/pip
           # Cache based on OS, Python version, and dependency hash
@@ -78,7 +78,7 @@ jobs:
           
       - name: Cache dependencies (Windows)
         if: startsWith(runner.os, 'Windows')
-        uses: actions/cache@v2
+        uses: actions/cache@v3.0.1
         with:
           path: ~\AppData\Local\pip\Cache
           # Cache based on OS, Python version, and dependency hash
@@ -108,7 +108,7 @@ jobs:
           python-version: "3.8"
 
       - name: Cache dependencies
-        uses: actions/cache@v2
+        uses: actions/cache@v3.0.1
         with:
           path: ~/.cache/pip
           # Cache based on OS, Python version, and dependency hash
@@ -165,7 +165,7 @@ jobs:
           python-version: ${{ matrix.python-version }}
 
       - name: Cache dependencies
-        uses: actions/cache@v2
+        uses: actions/cache@v3.0.1
         with:
           path: ~/.cache/pip
           # Cache based on OS, Python version, and dependency hash
